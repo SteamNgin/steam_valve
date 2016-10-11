@@ -14,7 +14,7 @@ describe SteamAPIKey do
       it 'raises a ApiKeyMissingError exception' do
         SteamAPIKey.set_api_key('')
 
-        expect{ SteamAPIKey.api_key }.to raise_error(SteamValve::ApiKeyMissingError)
+        expect{ SteamAPIKey.api_key }.to raise_error(SteamValveExceptions::ApiKeyMissingError)
       end
     end
   end
