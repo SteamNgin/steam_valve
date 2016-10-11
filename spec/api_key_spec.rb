@@ -2,17 +2,17 @@ require 'spec_helper'
 
 describe SteamAPIKey do
   describe '#api_key' do
-    context 'with an api key' do
+    context 'with an api key environment variable set' do
       it 'returns the API key' do
-        SteamAPIKey.set_api_key('ABCDEF')
+        ENV['STEAM_API_KEY'] = 'ABCDEF'
 
         expect(SteamAPIKey.api_key).to eq('ABCDEF')
       end
     end
 
-    context 'without a key' do
-      it 'raises a ApiKeyMissingError exception' do
-        SteamAPIKey.set_api_key('')
+    context 'without an api key environment variable set' do
+      it 'raises an ApiKeyMissingError' do
+        ENV['STEAM_API_KEY'] = ''
 
         expect{ SteamAPIKey.api_key }.to raise_error(SteamValveExceptions::ApiKeyMissingError)
       end
