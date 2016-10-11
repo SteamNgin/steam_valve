@@ -1,5 +1,8 @@
 require "steam_valve/version"
+require "steam_valve/steam_api_key"
 
 module SteamValve
-  # Your code goes here...
+  def self.hello
+    puts "Hello"
+  end
 end

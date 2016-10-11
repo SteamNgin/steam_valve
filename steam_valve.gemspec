@@ -6,18 +6,18 @@ require 'steam_valve/version'
 Gem::Specification.new do |spec|
   spec.name          = "steam_valve"
   spec.version       = SteamValve::VERSION
-  spec.authors       = ["Luke Bennellick"]
-  spec.email         = ["luke.bennellick@simplybusiness.co.uk"]
+  spec.authors       = ["Luke Bennellick", "Ross Hamilton"]
+  spec.email         = ["bennellick.luke@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby wrapper for Steam API}
+  spec.description   = %q{This Gem has been written to allow API calls to the Steam API}
+  spec.homepage      = "https://github.com/SteamNgin/steam_valve"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -32,4 +32,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.5"
 end
