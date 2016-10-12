@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe  do
+describe SteamValve do
   describe '#game_list' do
     context 'with a valid player_id' do
       it 'returns all of the players games' do

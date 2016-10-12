@@ -2,11 +2,15 @@ PATH
   remote: .
   specs:
     steam_valve (0.1.0)
+      httparty (~> 0.14.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    multi_xml (0.5.5)
     rake (10.5.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
