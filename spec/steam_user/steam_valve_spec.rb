@@ -8,4 +8,12 @@ describe SteamValve do
       end
     end
   end
+
+  describe '#current_players' do
+    context 'with a valid game_id' do
+      it 'returns the amount of current players' do
+        expect(SteamValve.current_players('292030')['response']).to have_key('player_count')
+      end
+    end
+  end
 end
